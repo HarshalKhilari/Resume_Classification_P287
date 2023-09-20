@@ -9,11 +9,11 @@ import textract
 import os
 
 # Load the saved XGBoost classifier model
-pickle_in = open(r"D:\DATA SCIENCE\DS EXCELR\INTERNSHIP\PROJECT 3 RESUME CLASSIFICATION\P287\xgb_classifier.pkl", "rb")
+pickle_in = open("./xgb_classifier.pkl", "rb")
 xgb_model = pickle.load(pickle_in)
 
 # Load the TF-IDF vectorizer if used during training
-tfidf_vectorizer = pickle.load(open(r"D:\DATA SCIENCE\DS EXCELR\INTERNSHIP\PROJECT 3 RESUME CLASSIFICATION\P287\tfidf_vectorizer.pkl", "rb"))
+tfidf_vectorizer = pickle.load(open("./tfidf_vectorizer.pkl", "rb"))
 
 def preprocess_text(text):
     # Lowercase the text
